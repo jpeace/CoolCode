@@ -69,3 +69,9 @@ nunit :unit_test do |nunit|
 	nunit.assemblies File.expand_path("Code/Source/#{ROOT_NAMESPACE}.Tests/bin/#{COMPILE_TARGET}/#{ROOT_NAMESPACE}.Tests.dll")
 	nunit.parameters "/xml:#{RESULTS_DIR}/nunit_results.xml"
 end
+
+desc "Builds database"
+task :database, :server do |t, args|
+	server = args[:server] || 'localhost'
+	puts `BuildDatabase.cmd #{server}`
+end
