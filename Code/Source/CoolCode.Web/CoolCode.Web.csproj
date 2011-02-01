@@ -33,39 +33,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FubuCore">
-      <HintPath>..\..\..\Lib\FubuMVC\FubuCore.dll</HintPath>
-    </Reference>
-    <Reference Include="FubuLocalization">
-      <HintPath>..\..\..\Lib\FubuMVC\FubuLocalization.dll</HintPath>
+      <HintPath>..\..\Lib\FubuMVC\FubuCore.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.Core">
-      <HintPath>..\..\..\Lib\FubuMVC\FubuMVC.Core.dll</HintPath>
+      <HintPath>..\..\Lib\FubuMVC\FubuMVC.Core.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.StructureMap">
-      <HintPath>..\..\..\Lib\FubuMVC\FubuMVC.StructureMap.dll</HintPath>
+      <HintPath>..\..\Lib\FubuMVC\FubuMVC.StructureMap.dll</HintPath>
     </Reference>
-    <Reference Include="HtmlTags">
-      <HintPath>..\..\..\Lib\FubuMVC\HtmlTags.dll</HintPath>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\Lib\Microsoft\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="StructureMap">
-      <HintPath>..\..\..\Lib\StructureMap\StructureMap.dll</HintPath>
+      <HintPath>..\..\Lib\StructureMap\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Services" />
-    <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
@@ -90,7 +76,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Endpoints\Home\Index\IndexEndpoint.cs" />
-    <Compile Include="Endpoints\Home\Index\IndexRequestModel.cs" />
     <Compile Include="Endpoints\Home\Index\IndexViewModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

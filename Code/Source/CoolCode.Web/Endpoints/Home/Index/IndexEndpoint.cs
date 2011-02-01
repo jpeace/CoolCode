@@ -2,7 +2,7 @@ namespace CoolCode.Web.Endpoints.Home.Index
 {
     public class IndexEndpoint
     {
-        public IndexViewModel Get(IndexRequestModel model)
+        public IndexViewModel Get()
         {
             return new IndexViewModel();
         }
