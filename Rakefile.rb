@@ -23,9 +23,8 @@ CLEAN.include("#{RESULTS_DIR}/*")
 
 desc "Update the version information for the build"
 assemblyinfo :version do |asm|
-  `git fetch`
   begin
-	gittag = `git describe --long`.chomp 	# looks something like v0.1.0-63-g92228f4
+	gittag = `git describe --long --tags`.chomp 	# looks something like v0.1.0-63-g92228f4
 	versionpart = /v?(\d+\.\d+\.\d+)/.match(gittag)
     gitnumberpart = /-(\d+)-/.match(gittag)
     gitnumber = gitnumberpart.nil? ? '0' : gitnumberpart[1]
@@ -65,6 +64,7 @@ task :test => [:unit_test]
 desc "Runs all unit tests"
 nunit :unit_test do |nunit|
 	FileUtils.rm_r RESULTS_DIR, :force => true
+	FileUtils.mkdir RESULTS_DIR
 	nunit.command = "Tools/NUnit/nunit-console.exe"
 	nunit.assemblies File.expand_path("Code/Source/#{ROOT_NAMESPACE}.Tests/bin/#{COMPILE_TARGET}/#{ROOT_NAMESPACE}.Tests.dll")
 	nunit.parameters "/xml:#{RESULTS_DIR}/nunit_results.xml"

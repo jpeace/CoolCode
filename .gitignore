@@ -3,6 +3,7 @@ bin
 Bin
 Obj
 Build
+Results
 *.suo
 *.csproj.user
 _Resharper.*
