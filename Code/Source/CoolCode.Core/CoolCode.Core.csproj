@@ -67,7 +67,12 @@
     <Compile Include="..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Configuration\NHibernate\Conventions\CollectionAccessConvention.cs" />
     <Compile Include="Configuration\NHibernate\Conventions\EnumConvention.cs" />
+    <Compile Include="Configuration\NHibernate\Mappings\CodeCategoryMap.cs" />
+    <Compile Include="Configuration\NHibernate\Mappings\CodeCommentMap.cs" />
+    <Compile Include="Configuration\NHibernate\Mappings\CodeLanguageMap.cs" />
+    <Compile Include="Configuration\NHibernate\Mappings\CodePostMap.cs" />
     <Compile Include="Configuration\NHibernate\Mappings\UserMap.cs" />
     <Compile Include="Configuration\NHibernate\Mappings\UserProfileMap.cs" />
     <Compile Include="Configuration\NHibernate\NHibernateConfigMarker.cs" />
