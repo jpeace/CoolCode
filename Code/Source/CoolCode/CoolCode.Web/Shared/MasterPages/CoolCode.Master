@@ -1,0 +1,17 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CoolCode.master.cs" Inherits="CoolCode.Web.Shared.MasterPages.CoolCode" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title><asp:ContentPlaceHolder ID="Title" runat="server"></asp:ContentPlaceHolder></title>
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">       
+        </asp:ContentPlaceHolder>
+    </div>
+</body>
+</html>
