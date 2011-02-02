@@ -41,6 +41,7 @@
     <Reference Include="FubuMVC.StructureMap">
       <HintPath>..\..\Lib\FubuMVC\FubuMVC.StructureMap.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlTags, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\..\Lib\Microsoft\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
@@ -48,6 +49,8 @@
       <HintPath>..\..\Lib\StructureMap\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -55,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="Endpoints\Account\Create\Create.aspx" />
     <Content Include="Endpoints\Home\Index\Index.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -65,11 +69,29 @@
     </Compile>
     <Compile Include="Configuration\Bootstrapper.cs" />
     <Compile Include="Configuration\Fubu\CoolCodeFubuRegistry.cs" />
+    <Compile Include="Configuration\Fubu\UI\CoolCodeHtmlConventions.cs" />
+    <Compile Include="Configuration\Fubu\UI\Extensions\FubuPageExtensions.cs" />
+    <Compile Include="Configuration\Fubu\UI\Extensions\HtmlTagExtensions.cs" />
+    <Compile Include="Configuration\Fubu\UI\Extensions\StringExtensions.cs" />
+    <Compile Include="Configuration\Fubu\UI\Profiles\Default\Builders\DisplayBuilders.cs" />
+    <Compile Include="Configuration\Fubu\UI\Profiles\Default\Builders\EditorBuilders.cs" />
+    <Compile Include="Configuration\Fubu\UI\Profiles\Default\Builders\LabelBuilders.cs" />
+    <Compile Include="Configuration\Fubu\UI\Profiles\HtmlConventionProfiles.cs" />
+    <Compile Include="Configuration\Fubu\UI\Profiles\Default\DefaultProfileConventions.cs" />
+    <Compile Include="Configuration\Fubu\UI\Tags\LabelTag.cs" />
+    <Compile Include="Configuration\Fubu\UI\Tags\SpanTag.cs" />
     <Compile Include="Configuration\Fubu\UrlPolicies\EndpointUrlPolicy.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Endpoints\Account\Create\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Endpoints\Account\Create\CreateEndpoint.cs" />
+    <Compile Include="Endpoints\Account\Create\CreateViewModel.cs" />
+    <Compile Include="Endpoints\Account\Create\CreateRequestModel.cs" />
     <Compile Include="Endpoints\EndpointMarker.cs" />
     <Compile Include="Endpoints\Home\Index\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -90,6 +112,10 @@
     <ProjectReference Include="..\CoolCode.Core\CoolCode.Core.csproj">
       <Project>{6B12C8F7-40DF-4ECC-AFB4-B48878CD233F}</Project>
       <Name>CoolCode.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CoolCode\CoolCode.csproj">
+      <Project>{FE4BE3F8-7EB9-4B55-AB41-E9F2ED9873E7}</Project>
+      <Name>CoolCode</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

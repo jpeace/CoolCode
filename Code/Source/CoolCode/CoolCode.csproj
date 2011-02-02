@@ -47,8 +47,11 @@
     <Compile Include="Domain\CodeComment.cs" />
     <Compile Include="Domain\CodeLanguage.cs" />
     <Compile Include="Domain\CodePost.cs" />
+    <Compile Include="Domain\Exceptions\DomainOperationException.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Domain\UserProfile.cs" />
+    <Compile Include="Fx\PasswordHash.cs" />
+    <Compile Include="Fx\PropertyExpression.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using CoolCode.Web.Configuration.Fubu.UI;
 using CoolCode.Web.Configuration.Fubu.UrlPolicies;
 using CoolCode.Web.Endpoints;
 using FubuMVC.Core;
@@ -31,6 +32,8 @@ namespace CoolCode.Web.Configuration.Fubu
 
             Routes
                 .UrlPolicy<EndpointUrlPolicy>();
+
+            HtmlConvention<CoolCodeHtmlConventions>();
         }
     }
 }
